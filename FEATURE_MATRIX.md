@@ -57,3 +57,19 @@
 | Cloud | RLS | Required |
 | Cloud | Realtime | Required |
 | PWA | Manifest/icons/service worker | Required |
+
+## Overview analytics expansion — 2026-09-11
+
+| Area | Capability | Implementation status |
+|---|---|---|
+| Dashboard | Month-wise / historical scope | [x] Implemented; needs browser verification |
+| Dashboard | Global filters: month/year/date range/category/subcategory/person/payment/plan | [x] Implemented; needs browser verification |
+| Dashboard | KPI financial command center | [x] Implemented; needs calculation verification |
+| Analytics | Spending trend with selectable dimension | [x] Implemented; needs browser verification |
+| Analytics | Income vs expense trend | [x] Implemented; needs browser verification |
+| Analytics | Category/subcategory composition | [x] Implemented; needs browser verification |
+| Analytics | Category/subcategory trend | [x] Implemented; needs browser verification |
+| Analytics | Person/payment-method analysis | [x] Implemented; needs browser verification |
+| Analytics | Budget vs actual | [x] Implemented; needs calculation verification |
+| Analytics | Plans/goals/commitment indicators | [x] Implemented; needs browser verification |
+| Budgets | Historical starting-point budget planner | [x] Implemented as guidance; does not auto-save |

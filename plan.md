@@ -310,3 +310,33 @@ Do NOT call the app production-ready until:
 
 ## 7. Release rule
 No final production ZIP may be described as production-ready until every item in Sections 4 and 5 is implemented/tested or explicitly waived by the user. In particular, missing functionality must never be hidden behind empty placeholder cards.
+
+## 4A — Overview / Dashboard implementation update (2026-09-11)
+
+Status: [~] Implemented; verification remains required.
+
+The active `index.html` now contains an expanded Overview financial analytics center with:
+- Month-wise and broader historical dashboard scopes.
+- Global filters for month, year, date range, category, subcategory, person, payment method and plan.
+- KPI cards for income, spending, net cash flow, budget remaining, savings rate, net worth, recurring commitments and upcoming bills.
+- Spending trend with selectable dimension: total, category, subcategory or person.
+- Income vs expense trend.
+- Category/subcategory composition and ranked spending views.
+- Category trend and subcategory trend views.
+- Person and payment-method spending analysis.
+- Budget-vs-actual analysis.
+- Plans/goals progress and commitment indicators.
+- Historical-budget starting-point planner using observed spending history rather than seeded/demo financial data.
+- Financial signal cards for expense/income ratio, budget usage, over-budget categories and planned commitments.
+
+The dashboard uses current cloud-loaded state and does not insert financial seed data.
+
+Verification still required: full browser interaction testing, source-parity audit, financial calculation edge cases, realtime/two-session behavior, mobile/PWA behavior and final security/RLS tests.
+
+## Execution log — 2026-09-11 (continued)
+- Implemented transaction edit for expense/income records.
+- Implemented linked-plan contribution reversal on expense deletion.
+- Upgraded CSV import with RFC-style quoted parsing, preview, validation and duplicate screening.
+- Implemented guided JSON restore with explicit confirmation and household-scoped upsert.
+- Added/verified PWA manifest, icons and service worker in the active project tree.
+- Status remains `[!] Needs verification` for end-to-end, security, realtime, device/PWA and deployment gates.
