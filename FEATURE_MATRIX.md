@@ -1,0 +1,59 @@
+# The Ledger — Original Feature Matrix
+
+| Area | Original capability | Production requirement |
+|---|---|---|
+| Navigation | Dashboard | Preserve |
+| Navigation | Add Expense | Preserve as Add Transaction |
+| Navigation | Budgets | Preserve |
+| Navigation | History | Preserve |
+| Navigation | Planning | Preserve |
+| Navigation | Investments | Preserve |
+| Transactions | Expense/income | Cloud-backed |
+| Transactions | Date | Required |
+| Transactions | Amount | Required |
+| Transactions | Category | Required for expense |
+| Transactions | Subcategory | Required capability |
+| Transactions | Note / merchant | Required capability |
+| Transactions | Person / added by | Required |
+| Transactions | Payment method | Required |
+| Transactions | Plan link | Required |
+| Transactions | Recent transactions | Required |
+| Transactions | Delete | Required |
+| Categories | Create/rename/delete | Required |
+| Categories | Monthly/yearly classification | Required |
+| Categories | Subcategory management | Required |
+| Budgets | Monthly income by person | Required |
+| Budgets | Monthly category budgets | Required |
+| Budgets | Yearly category budgets | Required |
+| Budgets | Base income | Required |
+| Budgets | Other income | Required |
+| Budgets | Recurring items | Required |
+| Budgets | Auto-add recurring expenses | Required |
+| Budgets | Credit-card bills | Required |
+| Budgets | Paid/unpaid bills | Required |
+| Planning | Future expense plans | Required |
+| Planning | Target/saved/month/notes | Required |
+| Planning | Contribution tracking | Required |
+| Investments | Holdings/type/owner | Required |
+| Investments | Starting value | Required |
+| Investments | Notes | Required |
+| Investments | Contributions/date/by/note | Required |
+| Investments | Edit/delete | Required |
+| Analytics | Income/budget/spent | Required |
+| Analytics | Budget vs actual | Required |
+| Analytics | Category composition | Required |
+| Analytics | Person/payment breakdown | Required |
+| Analytics | Six-month trend | Required |
+| Analytics | Category trend | Required |
+| Analytics | Top categories | Required |
+| Analytics | Yearly analysis | Required |
+| History | Month picker | Required |
+| Data | CSV import/export | Required |
+| Data | Quoted CSV parser | Required |
+| Data | Import validation/duplicates | Required |
+| Data | JSON backup/restore | Required |
+| Safety | Full reset | Required |
+| Cloud | Auth/household | Required |
+| Cloud | RLS | Required |
+| Cloud | Realtime | Required |
+| PWA | Manifest/icons/service worker | Required |
