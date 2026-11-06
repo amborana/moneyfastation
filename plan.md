@@ -340,3 +340,11 @@ Verification still required: full browser interaction testing, source-parity aud
 - Implemented guided JSON restore with explicit confirmation and household-scoped upsert.
 - Added/verified PWA manifest, icons and service worker in the active project tree.
 - Status remains `[!] Needs verification` for end-to-end, security, realtime, device/PWA and deployment gates.
+
+
+## Execution update — 2026-11-06 — Recurring expense automation
+- Moved recurring expense materialization out of browser login/onboarding.
+- Added a private database function that creates due monthly recurring expenses using the configured day-of-month, with month-end clamping and Asia/Kolkata date handling.
+- Added a daily Supabase Cron job at 00:15 UTC (05:45 IST); recurring entries no longer depend on either household member being signed in.
+- Added a database trigger with transaction-scoped advisory locking to prevent duplicate recurring expense inserts, including inserts from stale browser tabs during rollout.
+- Existing duplicate November records were preserved; no historical financial rows were deleted or edited.
