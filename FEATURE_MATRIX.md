@@ -73,3 +73,12 @@
 | Analytics | Budget vs actual | [x] Implemented; needs calculation verification |
 | Analytics | Plans/goals/commitment indicators | [x] Implemented; needs browser verification |
 | Budgets | Historical starting-point budget planner | [x] Implemented as guidance; does not auto-save |
+
+
+## Recurring automation update — 2026-11-06
+
+| Area | Capability | Implementation status |
+|---|---|---|
+| Recurring | Scheduled database-side monthly expense materialization independent of user login | [x] Implemented; next scheduled run pending |
+| Recurring | Duplicate prevention across simultaneous/stale clients | [x] Database trigger with transaction advisory lock; verified with duplicate insert test |
+| Recurring | Configured day-of-month and month-end clamping | [x] Implemented; calendar edge cases still need cycle-level verification |
