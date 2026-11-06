@@ -76,3 +76,25 @@ Not yet verified:
 - Device-level PWA installation/offline/reconnect tests.
 - Production HTTPS deployment smoke test.
 - Complete source-parity audit against the original React implementation.
+
+
+## Recurring automation update — 2026-11-06
+
+Implemented:
+- Removed client-side recurring inserts from both onboarding and normal login.
+- Added private.materialize_recurring_expenses() for scheduled database-side generation.
+- Added active Cron job moneyfastation-recurring-expenses (15 0 * * *, UTC).
+- Added a database trigger that serializes recurring expense inserts per household/recurring item/date and ignores an already-materialized duplicate.
+- Due dates use the recurring item's configured day, clamped to the final day of shorter months; scheduling uses Asia/Kolkata local date.
+
+Verified:
+- Manual materialization run returned 0 new rows because November entries already existed.
+- Cron job exists and is active.
+- Duplicate-insert guard test against an already-existing November EMI returned no inserted row.
+- Existing duplicate clusters remain untouched: Ahmedabad Home (3 rows) and Home Loan EMI (2 rows) for 2026-11-01.
+- No historical rows were deleted or edited.
+
+Remaining:
+- Verify next scheduled execution in Cron job history.
+- Verify Cloudflare Pages deployment and one real recurring cycle after deployment.
+- Historical November duplicates still require an explicit cleanup decision.
